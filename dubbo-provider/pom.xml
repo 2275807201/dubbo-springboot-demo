@@ -24,6 +24,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>com.liangh</groupId>
+			<artifactId>dubbo-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 
 		<!-- Dubbo Spring Boot Starter -->
 		<dependency>
@@ -37,11 +43,15 @@
 			<artifactId>dubbo</artifactId>
 		</dependency>
 
+		<!-- Zookeeper dependencies -->
 		<dependency>
-			<groupId>com.liangh</groupId>
-			<artifactId>dubbo-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-dependencies-zookeeper</artifactId>
+			<version>${dubbo.version}</version>
+			<type>pom</type>
 		</dependency>
+
+
 
 	</dependencies>
 
@@ -51,6 +61,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring-boot.version}</version>
 			</plugin>
 		</plugins>
 	</build>

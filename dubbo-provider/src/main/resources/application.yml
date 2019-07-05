@@ -3,6 +3,4 @@ logging:
   pattern:
     console: '[%date{yyyy-MM-dd HH:mm:ss.SSS}] %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%logger){cyan} %line %clr(:){faint} %m%n'
 
-server:
-  port: 8082
 

@@ -8,4 +8,4 @@ server:
 
 spring:
   application:
-    name: dubbo-auto-configure-consumer-sample
+    name: dubbo-consumer

@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.math.BigDecimal;
 
 @Slf4j
-@Service(interfaceClass = MoneyService.class,version = "1.0.0", delay = -1, retries = -1,timeout = 1000*10)
+@Service
 public class MoneyServiceImpl implements MoneyService {
 
     @Override

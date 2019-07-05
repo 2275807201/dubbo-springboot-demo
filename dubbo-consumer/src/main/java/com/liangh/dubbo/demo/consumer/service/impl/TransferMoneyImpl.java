@@ -12,8 +12,7 @@ import java.math.BigDecimal;
 @Service
 public class TransferMoneyImpl implements TransferMoney {
 
-//    @Reference(version = "1.0.0",retries = 0)
-    @Reference(url = "dubbo://127.0.0.1:20880")
+    @Reference
     private MoneyService moneyService;
 
     @Override

@@ -45,6 +45,13 @@
 			<version>2.0.0</version>
 		</dependency>
 
+		<!-- 引入zookeeper的依赖 -->
+		<dependency>
+			<groupId>com.101tec</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.10</version>
+		</dependency>
+
 
 	</dependencies>
 

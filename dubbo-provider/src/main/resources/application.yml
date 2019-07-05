@@ -9,38 +9,3 @@ spring:
     username: root
     password: '@gnnaa1993'
     driver-class-name: com.mysql.cj.jdbc.Driver
-  dubbo:
-#    provider:
-#      filter: dubboExceptionFilter,-exception
-    application:
-      name: dubbo-provider
-      qosEnable: false
-    consumer:
-      check: false
-    registry:
-      address: zookeeper://localhost:2181
-    protocol:
-      port: 28061
-      name: dubbo
-    scan:
-      basePackages: com.liangh.dubbo.demo.provider.service
-
-#  spring.application.name=dubbo-spring-boot-starter
-#  spring.dubbo.server=true
-#  spring.dubbo.registry=N/A
-
-
-debug: true
-#dubbo:
-#  protocol:
-#    name: dubbo
-#    port: 10001
-#  registry:
-#    address: zookeeper://localhost:2181
-#  provider:
-#    timeout: 60000
-#  consumer:
-#    timeout: 60000
-#    check: false
-#  application:
-#    name: provider

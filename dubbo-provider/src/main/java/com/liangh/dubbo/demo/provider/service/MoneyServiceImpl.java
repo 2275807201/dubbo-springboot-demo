@@ -1,15 +1,13 @@
 package com.liangh.dubbo.demo.provider.service;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.liangh.dubbo.demo.api.MoneyService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
+import org.apache.dubbo.config.annotation.Service;
 
 import java.math.BigDecimal;
 
 @Slf4j
-@Service
-@Component
+@Service(version = "1.0.0")
 public class MoneyServiceImpl implements MoneyService {
 
     @Override

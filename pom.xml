@@ -7,12 +7,20 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.liangh</groupId>
 	<artifactId>dubbo-springboot-demo</artifactId>
 	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+		<dubbo.version>2.7.1</dubbo.version>
+	</properties>
+
+
 
 	<modules>
 		<module>dubbo-provider</module>
@@ -21,6 +29,20 @@
 	</modules>
 	<name>dubbo-springboot-demo</name>
 	<description>springboot + dubbo 的整合</description>
+
+	<repositories>
+		<repository>
+			<id>apache.snapshots.https</id>
+			<name>Apache Development Snapshot Repository</name>
+			<url>https://repository.apache.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<dependencies>
 
@@ -31,6 +53,41 @@
 		</dependency>
 
 	</dependencies>
+
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- Apache Dubbo  -->
+			<dependency>
+				<groupId>org.apache.dubbo</groupId>
+				<artifactId>dubbo-dependencies-bom</artifactId>
+				<version>${dubbo.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.dubbo</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 
 </project>

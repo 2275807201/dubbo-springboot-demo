@@ -3,11 +3,13 @@ package com.liangh.dubbo.demo.provider.service;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.liangh.dubbo.demo.api.MoneyService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
 @Slf4j
 @Service
+@Component
 public class MoneyServiceImpl implements MoneyService {
 
     @Override

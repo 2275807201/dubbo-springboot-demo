@@ -9,3 +9,7 @@ server:
 spring:
   application:
     name: dubbo-consumer
+
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
